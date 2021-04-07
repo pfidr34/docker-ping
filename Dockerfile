@@ -1,9 +1,8 @@
-ARG BASE=alpine:latest
-FROM ${BASE}
+FROM alpine:latest
 
 LABEL maintainer="pfidr"
 
-ENV HOSTNAME=
 ENV TIMEOUT=
+ENV HOSTNAME=
 
 CMD ["sh", "-c", "ping -i ${TIMEOUT} ${HOSTNAME}"]
